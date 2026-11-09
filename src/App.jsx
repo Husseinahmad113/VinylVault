@@ -7,6 +7,8 @@ import Navbar from './components/Navbar.jsx'
 
 import CartDrawer from './components/CartDrawer.jsx'
 
+import AlbumDetailPage from './pages/AlbumDetailPage.jsx'
+
 
 function App() {
   const [cart, setCart] = useState([])
@@ -73,7 +75,9 @@ function App() {
         
 <Route path="/" element={<CatalogPage onAddToCart={addToCart} />} />
 
-        <Route path="/album/:albumId" element={<h1>Album Details</h1>} />
+
+<Route path="/album/:albumId" element={<AlbumDetailPage onAddToCart={addToCart} />} />
+
         <Route path="/checkout" element={<h1>Checkout</h1>} />
       </Routes>
     
