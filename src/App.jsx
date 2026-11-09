@@ -9,6 +9,8 @@ import CartDrawer from './components/CartDrawer.jsx'
 
 import AlbumDetailPage from './pages/AlbumDetailPage.jsx'
 
+import CheckoutPage from './pages/CheckoutPage.jsx'
+
 
 function App() {
   const [cart, setCart] = useState([])
@@ -56,6 +58,10 @@ function App() {
     )
   }
 
+  function clearCart() {
+    setCart([])
+  }
+
   const cartCount = cart.reduce(
     (total, item) => total + item.quantity,
     0
@@ -78,7 +84,9 @@ function App() {
 
 <Route path="/album/:albumId" element={<AlbumDetailPage onAddToCart={addToCart} />} />
 
-        <Route path="/checkout" element={<h1>Checkout</h1>} />
+    
+<Route path="/checkout" element={<CheckoutPage cart={cart} onClearCart={clearCart} />} />
+
       </Routes>
     
     

@@ -136,3 +136,68 @@
     padding: 20px 12px;
   }
 }
+
+/* Checkout page */
+.checkout-page {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.checkout-page h1 {
+  margin-bottom: 24px;
+}
+
+.checkout-page h2 {
+  margin-top: 28px;
+}
+
+/* Checkout form */
+.checkout-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px auto;
+  max-width: 450px;
+  text-align: left;
+}
+
+.checkout-page label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.checkout-page input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #555568;
+  border-radius: 6px;
+  background: #242430;
+  color: white;
+  font-size: 16px;
+}
+
+.checkout-page form button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkout-page form button:hover {
+  background: #7c3aed;
+}
+
+/* Album detail list alignment */
+.album-detail-page ul,
+.album-detail-page ol {
+  display: inline-block;
+  text-align: left;
+  padding-left: 28px;
+}
+
