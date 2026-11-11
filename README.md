@@ -43,7 +43,8 @@ Vite will display a local development URL, typically:
 
     http://localhost:5173/
 
-Open this URL in a web browser to verify that the application loads successfully. Once implemented, the VinylVault storefront will display the album catalog and allow navigation between the catalog, album details, and checkout pages.
+
+The VinylVault storefront displays the album catalog and allows navigation between the catalog, album details, and checkout pages.
 
 To stop the development server, press Ctrl + C in the terminal.
 
@@ -71,7 +72,7 @@ React Router for navigation and reusable React functional components are used in
       addToCart(album)
       updateQuantity(id, change)
       removeFromCart(id)
-      toggleCart()
+      setIsCartOpen() - Toggles the cart drawer using an inline callback.
       clearCart()
 
     <Navbar> - src/components/Navbar.jsx
@@ -143,7 +144,7 @@ React Router for navigation and reusable React functional components are used in
             handleSubmit(event)
             event.preventDefault()
             onClearCart() after successful validation.
-            useNavigate() for client-side navigation.
+            Link to catalog after order confirmation.
 
     <CartDrawer> - src/components/CartDrawer.jsx
       State: None

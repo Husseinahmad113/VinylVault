@@ -3,13 +3,15 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function CheckoutPage({ cart, onClearCart }) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    address: '',
-    city: '',
-    zip: ''
-  })
+ 
+const [formData, setFormData] = useState({
+  name: '',
+  email: '',
+  address: '',
+  city: '',
+  zip: '',
+  cardDetails: ''
+})
 
   const [orderConfirmed, setOrderConfirmed] = useState(false)
 
@@ -123,6 +125,20 @@ function CheckoutPage({ cart, onClearCart }) {
               title="Enter a 5-digit ZIP code"
               required
             />
+
+<label htmlFor="cardDetails">Card Details (Demo Only)</label>
+<input
+  id="cardDetails"
+  name="cardDetails"
+  type="text"
+  placeholder="Enter DEMO-CARD"
+  value={formData.cardDetails}
+  onChange={handleInputChange}
+  pattern="DEMO-CARD"
+  title="For this demo, enter DEMO-CARD"
+  autoComplete="off"
+  required
+/>
 
             <button type="submit">Place Order</button>
           </form>

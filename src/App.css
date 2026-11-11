@@ -6,6 +6,7 @@
 }
 
 /* Navigation */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -13,7 +14,11 @@
   padding: 20px 32px;
   background: #20202a;
   border-bottom: 1px solid #414150;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
 
 .navbar-brand {
   color: #ffffff;
