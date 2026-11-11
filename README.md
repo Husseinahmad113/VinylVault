@@ -57,7 +57,7 @@ The root directory contains README.md, index.html, vite.config.js, package.json,
 React Router for navigation and reusable React functional components are used in the VinylVault application. App.jsx manages the shared shopping cart state, which is then provided to child components via callback methods and props.
 
 ### Component Hierarchy Tree
----text
+```text
 <BrowserRouter> - src/main.jsx
   State: None
   Props: None
